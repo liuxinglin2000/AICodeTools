@@ -1,0 +1,17 @@
+在现在这个文件夹下，我想要写一个cursor插件也就是vscode插件，帮我写一个基础的，然后教我如何导入插件
+
+插件安装：
+先打包成 .vsix
+在项目根目录（e:\GitHubProject\AICodeTools）打开终端。
+若未安装打包工具，先执行：npm install -g @vscode/vsce
+再执行：npm run compile（确保有 dist/）
+执行：vsce package，会生成类似 aicode-tools-0.1.0.vsix 的文件。
+
+
+
+cursor命令行界面使用powershell安装
+irm 'https://cursor.com/install?win32=true' | iex
+agent --version
+重新打开powershell
+如果可以正常启动agent就可以直接用了
+如果提示“系统上禁止运行脚本”，就执行：Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 放宽当前用户的执行策略

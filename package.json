@@ -1,0 +1,57 @@
+{
+  "name": "aicode-tools",
+  "displayName": "AICode Tools",
+  "description": "AICodeTools 基础插件示例",
+  "version": "0.1.0",
+  "publisher": "aicode-tools",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:aicode-tools.mainView"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aicode-tools",
+          "title": "AICode Tools",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "aicode-tools": [
+        {
+          "type": "tree",
+          "id": "aicode-tools.mainView",
+          "name": "AICode Tools"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "aicode-tools.selectOption1",
+        "title": "提交检测工具"
+      },
+      {
+        "command": "aicode-tools.selectOption2",
+        "title": "选项2"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.3.0"
+  }
+}
